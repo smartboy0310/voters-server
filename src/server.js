@@ -6,7 +6,9 @@ const PORT = process.env.PORT || 7000
 const modules = require('./modules')
 
 const server = new ApolloServer({
-   modules
+   modules,
+   introspection: true,
+   playground: true
 })
 
 server.applyMiddleware({ app })
